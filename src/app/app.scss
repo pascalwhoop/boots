@@ -14,3 +14,24 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+blockquote{
+  background: #f8f8f8;
+  border-radius: 6px;
+  border-left: 2px solid #488aff;
+  color: #555555;
+  font-family: Sans;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+
+blockquote > p{
+  display:block;
+  color:#333333;
+  font-style: italic;
+  margin: 0;
+}
