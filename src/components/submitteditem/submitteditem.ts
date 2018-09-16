@@ -2,6 +2,7 @@ import {Component, Input,} from '@angular/core';
 import {Boot} from "../../model";
 import {AngularFirestore} from "@angular/fire/firestore";
 import {ToastController} from "ionic-angular";
+import {DomSanitizer} from "@angular/platform-browser";
 
 /**
  * Generated class for the SubmitteditemComponent component.
@@ -21,13 +22,17 @@ export class SubmitteditemComponent {
   admin: string;
   displayWidth = 900;
 
-  constructor(public toastCtrl: ToastController, private db: AngularFirestore) {
+  constructor(private sanitizer: DomSanitizer, public toastCtrl: ToastController, private db: AngularFirestore) {
     this.admin = localStorage.getItem("admin");
     this.displayWidth = window.innerWidth;
   }
 
-  cleanUrl(url){
-    return encodeURIComponent(url);
+
+
+  imgDivStyle(){
+    let url = "https://res.cloudinary.com/dzp67xqe9/image/fetch/c_limit,f_auto,q_auto,w_" + this.displayWidth + "/" + encodeURIComponent(this.boot.imgUrl);
+    let style = `background-image: url("${url}")`;
+    return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 
   delete(boot: Boot) {

@@ -1,8 +1,7 @@
 <!-- Generated template for the SubmitteditemComponent component -->
 <ion-card *ngIf="boot != null">
 
-  <div class="imageContainer">
-    <img src="https://res.cloudinary.com/dzp67xqe9/image/fetch/c_limit,f_auto,q_auto,w_{{displayWidth}}/{{cleanUrl(boot.imgUrl)}}"/>
+  <div class="imageContainer" [style]="imgDivStyle()">
   </div>
   <ion-card-content>
     <ion-card-title>

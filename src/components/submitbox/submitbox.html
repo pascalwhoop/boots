@@ -10,7 +10,7 @@
 
     <ion-item *ngIf="!boot.imgUrl">
       <ion-label stacked>Anonymes Beweisbild</ion-label>
-      <ion-input accept="image/*" capture="camera" [(ngModel)]="imgVal" type="file" (change)="imageChangeListner($event)" ></ion-input>
+      <ion-input id="imageUpload" accept="image/*" capture="camera" [(ngModel)]="imgVal" type="file" (change)="imageChangeListner($event)" ></ion-input>
     </ion-item>
 
     <ion-item>
