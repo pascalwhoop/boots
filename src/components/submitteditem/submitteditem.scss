@@ -1,0 +1,10 @@
+submitteditem {
+  div.imageContainer{
+    max-height: 500px;
+    overflow: hidden;
+    img{
+      position: relative;
+      margin: -50% auto;/* virtualy height needed turn don to zero */
+    }
+  }
+}

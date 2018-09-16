@@ -1,0 +1,12 @@
+
+<ion-content>
+  <button ion-button *ngIf="admin" (click)="loginAdmin()">Login</button>
+  <counter [boots]="boots"></counter>
+  <submitbox *ngIf="!joined" [bootsCol]="bootsCol"></submitbox>
+  <ion-navbar>
+    <ion-title>
+     Schon dabei
+    </ion-title>
+  </ion-navbar>
+  <submittedlist></submittedlist>
+</ion-content>

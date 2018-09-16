@@ -1,0 +1,31 @@
+<!-- Generated template for the SubmitteditemComponent component -->
+<ion-card *ngIf="boot != null">
+
+  <div class="imageContainer">
+    <img src="https://res.cloudinary.com/dzp67xqe9/image/fetch/c_limit,f_auto,q_auto,w_{{displayWidth}}/{{cleanUrl(boot.imgUrl)}}"/>
+  </div>
+  <ion-card-content>
+    <ion-card-title>
+      {{boot.nick}}
+    </ion-card-title>
+    <p>
+      {{boot.text}}
+    </p>
+    <button ion-button color="danger" *ngIf="admin" (click)="delete(boot)">Delete</button>
+  </ion-card-content>
+  <ion-list>
+
+    <ion-item *ngIf="boot.rank">
+      <ion-icon item-start name="megaphone" color="secondary">
+      </ion-icon>
+      <h2>Rang</h2>
+      <ion-note item-end>{{boot.rank}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start name="time" color="secondary"> </ion-icon>
+      <h2>Veröffentlicht</h2>
+      <ion-note item-end>{{boot.signedDate | date: 'dd/MM/yyyy HH:XX'}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-card>

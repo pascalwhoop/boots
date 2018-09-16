@@ -1,0 +1,38 @@
+<!-- Generated template for the SubmitboxComponent component -->
+<ion-card *ngIf="!submitted" style="position: relative">
+  <img [src]="boot.imgUrl" *ngIf="boot.imgUrl" alt="">
+  <ion-card-content>
+    <ion-card-header>Bist du dabei?</ion-card-header>
+    <ion-item>
+      <ion-label stacked>Nickname</ion-label>
+      <ion-input [(ngModel)]="boot.nick" type="text" placeholder="optional"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="!boot.imgUrl">
+      <ion-label stacked>Anonymes Beweisbild</ion-label>
+      <ion-input accept="image/*" capture="camera" [(ngModel)]="imgVal" type="file" (change)="imageChangeListner($event)" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Rang</ion-label>
+      <ion-input [(ngModel)]="boot.rank" type="text" placeholder="optional"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nachricht</ion-label>
+      <ion-input [(ngModel)]="boot.text" type="text" placeholder="Was willst du anderen mitteilen?"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button color="primary" [disabled]="!currentUpload" color="secondary" (click)="submit(boot)">Abschicken</button>
+    </ion-item>
+
+    <div *ngIf="currentUpload && currentUpload.progress">
+      <div class="progress">
+        <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+      </div>
+      Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+    </div>
+
+  </ion-card-content>
+
+</ion-card>

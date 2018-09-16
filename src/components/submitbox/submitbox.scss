@@ -1,0 +1,20 @@
+submitbox {
+  .submit-card-overlay{
+    background: lightblue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    opacity: 0.8;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    .join{
+      font-size: x-large;
+      text-align: center;
+    }
+  }
+
+}
