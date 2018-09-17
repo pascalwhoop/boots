@@ -30,8 +30,38 @@ blockquote{
 }
 
 blockquote > p{
-  display:block;
   color:#333333;
+  display:block;
   font-style: italic;
   margin: 0;
+}
+
+ion-label,
+.label-md[stacked] {
+  color: #555;
+  font-size: 1.4rem;
+}
+.p-relative {
+  position: relative;
+}
+
+.d-flex {
+  display:flex;
+  justify-content:stretch;
+  align-items: stretch;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-column {
+  flex-direction: column;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
 }

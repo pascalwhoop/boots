@@ -1,38 +1,46 @@
 <!-- Generated template for the SubmitboxComponent component -->
 <ion-card *ngIf="!submitted" style="position: relative">
   <img [src]="boot.imgUrl" *ngIf="boot.imgUrl" alt="">
-  <ion-card-content>
-    <ion-card-header>Bist du dabei?</ion-card-header>
-    <ion-item>
+  <ion-card-header>
+    <ion-card-title>Bist du dabei?</ion-card-title>
+  </ion-card-header>
+
+  <ion-item *ngIf="!boot.imgUrl">
+    <ion-label stacked>Anonymes Beweisbild</ion-label>
+    <ion-input id="imageUpload" accept="image/*" capture="camera" [(ngModel)]="imgVal" type="file" (change)="imageChangeListner($event)" ></ion-input>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-item color="light">
+      <ion-card-title><small>Optional</small></ion-card-title>
+    </ion-item>
+
+    <ion-item color="light">
       <ion-label stacked>Nickname</ion-label>
-      <ion-input [(ngModel)]="boot.nick" type="text" placeholder="optional"></ion-input>
+      <ion-input [(ngModel)]="boot.nick" type="text" placeholder="Columbo"></ion-input>
     </ion-item>
 
-    <ion-item *ngIf="!boot.imgUrl">
-      <ion-label stacked>Anonymes Beweisbild</ion-label>
-      <ion-input id="imageUpload" accept="image/*" capture="camera" [(ngModel)]="imgVal" type="file" (change)="imageChangeListner($event)" ></ion-input>
-    </ion-item>
-
-    <ion-item>
+    <ion-item color="light">
       <ion-label stacked>Rang</ion-label>
-      <ion-input [(ngModel)]="boot.rank" type="text" placeholder="optional"></ion-input>
+      <ion-input [(ngModel)]="boot.rank" type="text" placeholder="z.b. »Polizeimeister«"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item color="light">
       <ion-label stacked>Nachricht</ion-label>
       <ion-input [(ngModel)]="boot.text" type="text" placeholder="Was willst du anderen mitteilen?"></ion-input>
     </ion-item>
+
     <ion-item>
-      <button ion-button color="primary" [disabled]="!currentUpload" color="secondary" (click)="submit(boot)">Abschicken</button>
+      <button ion-button full color="primary" [disabled]="!currentUpload" color="secondary" (click)="submit(boot)" padding>Abschicken</button>
     </ion-item>
+  </ion-list>
 
-    <div *ngIf="currentUpload && currentUpload.progress">
-      <div class="progress">
-        <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
-      </div>
-      Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+  <div *ngIf="currentUpload && currentUpload.progress">
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
     </div>
-
-  </ion-card-content>
+    Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+  </div>
 
 </ion-card>

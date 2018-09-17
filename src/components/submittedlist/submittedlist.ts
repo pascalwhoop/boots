@@ -10,7 +10,10 @@ import {AngularFirestore} from "@angular/fire/firestore";
  */
 @Component({
   selector: 'submittedlist',
-  templateUrl: 'submittedlist.html'
+  templateUrl: 'submittedlist.html',
+  // host: {
+  //   'style': 'background:red;display:block;'
+  // }
 })
 export class SubmittedlistComponent {
 
