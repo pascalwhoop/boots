@@ -15,7 +15,40 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-blockquote{
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../assets/fonts/FiraSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../assets/fonts/FiraSans-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../assets/fonts/FiraSans-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../assets/fonts/FiraSans-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body,
+ion-app.md {
+  font-family: "Fira Sans", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+blockquote {
   background: #f8f8f8;
   border-radius: 6px;
   border-left: 2px solid #488aff;
