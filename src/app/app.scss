@@ -15,6 +15,8 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+@import '../theme/variables.scss';
+
 @font-face {
   font-family: 'Fira Sans';
   src: url('../assets/fonts/FiraSans-Regular.otf') format('opentype');
@@ -97,4 +99,45 @@ ion-label,
 }
 .justify-content-center {
   justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: color($colors, primary, base);
+}
+.text-light {
+  color: color($colors, light, base);
+}
+
+.bg-primary {
+  background-color: color($colors, primary, base);
+}
+.bg-light {
+  background-color: color($colors, light, base);
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+hr {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-top: 2rem !important;
+  padding-bottom: 3rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  padding-left: 2rem;
 }
