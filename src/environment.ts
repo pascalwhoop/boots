@@ -10,3 +10,5 @@ export const firebaseConfig = {
 export const firebaseConstants = {
   bootsCollection: 'boots/'
 };
+
+export const HOST = "http://show-your-boots.org";
