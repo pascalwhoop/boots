@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "ionic:build": "node --max-old-space-size=4096 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build",
+    "ionic:prod": "node ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build  --minifyjs --minifycss --engine browser --aot",
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
