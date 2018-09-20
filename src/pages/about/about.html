@@ -1,50 +1,53 @@
 <ion-content padding>
-  <h1 class="text-center text-primary">Show Your Boots</h1>
-  <section>
-    <h3>Was ist das?</h3>
-    <p>Ziel dieses Projektes ist es PolizistenInnen den Rückhalt zu geben zu sagen:</p>
-    <ion-card color="light">
-      <ion-card-content>
-        <span class="fictive-quote">Es reicht! Dieser Einsatz muss beendet werden.</span>
-      </ion-card-content>
-    </ion-card>
+  <div class="page-wrap">
+    <h1 class="text-center text-primary">Show Your Boots</h1>
+    <section>
+      <h3><strong>Was ist das?</strong></h3>
+      <p>Ziel dieses Projektes ist es PolizistenInnen den Rückhalt zu geben zu sagen:</p>
+      <ion-card color="light">
+        <ion-card-content>
+          <span class="fictive-quote">Es reicht! Dieser Einsatz muss beendet werden.</span>
+        </ion-card-content>
+      </ion-card>
 
-    <p>Wir bitten euch um Folgendes: Teilt hier anonym ein Foto von euch (kein Gesicht, keine ID – Beispiele weiter unten) und macht mit eurer Teilnahme klar, dass ihr gegen diesen Einsatz im Hambacher Forst seid.</p>
+      <p>Wir bitten euch um Folgendes: Teilt hier anonym ein Foto von euch (kein Gesicht, keine ID – Beispiele weiter unten) und macht mit eurer Teilnahme klar, dass ihr gegen diesen Einsatz im Hambacher Forst seid.</p>
 
-    <p>Einfach unten auf »Liste« klicken, »Boots zeigen« und sehen, wieviele noch dabei sind.</p>
-  </section>
-  <section>
-    <h3>
-      <ion-icon name="people" color="primary"></ion-icon><br>
-      <span>Was kommt dabei rum?</span>
-    </h3>
+      <p>Einfach unten auf »Liste« klicken, »Boots zeigen« und sehen, wieviele noch dabei sind.</p>
+    </section>
+    <section>
+      <h3>
+        <ion-icon name="people" color="primary"></ion-icon><br>
+        <strong>Was kommt dabei rum?</strong>
+      </h3>
 
-    <p>Wenn hunderte, oder sogar tausende von euch mitteilen, dass sie nicht einverstanden sind mit diesem
-    Polizeieinsatz, dann können wir ggf. gemeinsam »Nein« sagen und vom Recht auf Remonstration Gebrauch machen.</p>
-    <!-- Wir würden hier eine Uhrzeit veröffentlichen an der alle aufgerufen werden, ihren Helm auszuziehen und von ihrem Recht auf Remonstration Gebrauch zu machen. -->
+      <p>Wenn hunderte, oder sogar tausende von euch mitteilen, dass sie nicht einverstanden sind mit diesem
+      Polizeieinsatz, dann können wir ggf. gemeinsam »Nein« sagen und vom Recht auf Remonstration Gebrauch machen.</p>
+      <!-- Wir würden hier eine Uhrzeit veröffentlichen an der alle aufgerufen werden, ihren Helm auszuziehen und von ihrem Recht auf Remonstration Gebrauch zu machen. -->
 
-    <p>Wir wissen, dass dieser Schritt Mut braucht. Wir wollen euch stärken indem wir sichbar machen, wie viele KollegInnen gemeinsam mit euch remonstrieren würden. Wir wollen die möglichen Sorgen vor Auswirkungen auf die persönliche Karriere senken.</p>
-  </section>
-  <section>
+      <p>Wir wissen, dass dieser Schritt Mut braucht. Wir wollen euch stärken indem wir sichbar machen, wie viele KollegInnen gemeinsam mit euch remonstrieren würden. Wir wollen die möglichen Sorgen vor Auswirkungen auf die persönliche Karriere senken.</p>
+    </section>
+    <section>
 
-    <h3>
-      <ion-icon name="lock" color="primary"></ion-icon><br>
-      <span>Was wird gespeichert?</span>
-    </h3>
+      <h3>
+        <ion-icon name="lock" color="primary"></ion-icon><br>
+        <strong>Was wird gespeichert?</strong>
+      </h3>
 
-    <p>Wir speichern <strong>keine</strong> Daten außer die von euch geteilten:</p>
+      <p>Wir speichern <strong>keine</strong> Daten außer die von euch geteilten:</p>
 
-    <ul>
-      <li>ein Foto das zeigt, dass ihr zur Polizei gehört, egal wie ihr dies beweist</li>
-      <li>einen Freitext den ihr selbst schreibt</li>
-      <li>euern Rang, wenn ihr diesen mit uns freiwillig teilt</li>
-    </ul>
+      <ul>
+        <li>ein Foto das zeigt, dass ihr zur Polizei gehört, egal wie ihr dies beweist</li>
+        <li>einen Freitext den ihr selbst schreibt</li>
+        <li>euern Rang, wenn ihr diesen mit uns freiwillig teilt</li>
+      </ul>
 
-    <p>Wir speichern <strong>keine IP Adressen</strong>. Wir nutzen <strong>keine</strong> analytics Werkzeuge. Alles was ihr uns gebt behandeln wir anonym.</p>
-  </section>
+      <p>Wir speichern <strong>keine</strong> IP Adressen. Wir nutzen <strong>keine</strong> analytics Werkzeuge. Alles was ihr uns gebt behandeln wir anonym.</p>
+    </section>
 
-  <h2>So könnten eure Bilder aussehen</h2>
-  <ion-grid>
+    <h3>So könnten eure Bilder aussehen</h3>
+  </div>
+
+  <ion-grid padding>
     <ion-row>
       <ion-col *ngFor="let boot of policeSampleBoots" col-12 col-md-6 col-lg-4>
         <submitteditem [boot]="boot"></submitteditem>
