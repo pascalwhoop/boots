@@ -1,4 +1,7 @@
-import {Component, ElementRef, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, Input} from '@angular/core';
+// import {ElementRef} from '@angular/core';
+// import {OnChanges} from '@angular/core';
+// import {SimpleChanges} from '@angular/core';
 import {Boot} from "../../model";
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/firestore";
 import {ImageUploadProvider, Upload} from "../../providers/image-upload/image-upload";
@@ -23,7 +26,7 @@ export class SubmitboxComponent{
   currentUpload: Upload;
   submitted = false;
 
-  constructor(private element: ElementRef, private db: AngularFirestore, private uploadSvc: ImageUploadProvider) {
+  constructor( /* private element: ElementRef, */ private db: AngularFirestore, private uploadSvc: ImageUploadProvider) {
   }
 
   submit(boot: Boot) {

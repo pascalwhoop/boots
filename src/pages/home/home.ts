@@ -3,7 +3,7 @@ import {AlertController, NavController, ToastController} from 'ionic-angular';
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/firestore";
 import {Observable} from "rxjs";
 import {Boot} from "../../model";
-import {FirebaseAuth} from "@angular/fire";
+// import {FirebaseAuth} from "@angular/fire";
 import {AngularFireAuth} from "@angular/fire/auth";
 
 @Component({
