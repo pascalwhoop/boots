@@ -27,7 +27,8 @@ export class SubmitteditemComponent {
 
   constructor(private sanitizer: DomSanitizer, public toastCtrl: ToastController, private db: AngularFirestore) {
     this.admin = localStorage.getItem("admin");
-    this.displayWidth = window.innerWidth;
+    let width = window.innerWidth;
+    this.displayWidth =  width < 400 ? 400 : 900;
     this.randomAmountOfMinutes = Math.floor(Math.random() * 46) + 1;
   }
 
